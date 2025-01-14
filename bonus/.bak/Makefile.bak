@@ -6,11 +6,11 @@
 #    By: jeportie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/12 14:15:40 by jeportie          #+#    #+#              #
-#    Updated: 2024/09/16 14:17:43 by jeportie         ###   ########.fr        #
+#    Updated: 2025/01/14 21:23:16 by jeportie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philo
+NAME = philo_bonus
 
 ### BEGIN AUTO GENERATED FILES ###
 # List of source files:
@@ -37,7 +37,7 @@ SRC = \
 # **************************************************************************** #
 
 CC = 		cc
-CFLAGS = 	-Wall -Wextra -Werror -pthread --verbose
+CFLAGS = 	-Wall -Wextra -Werror -pthread
 LIBS = 
 VFLAGS = 	-g3 -fPIC 
 SANITIZE = 	-g3 -fPIC -fsanitize=thread
@@ -54,6 +54,14 @@ OBJ_DIR = 	obj
 LIB_DIR =	
 
 # **************************************************************************** #
+#                                 Files                                        #
+# **************************************************************************** #
+
+# Object and Dependency Files
+OBJ = 		$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+DEPS = 		$(OBJ:.o=.d)
+
+# **************************************************************************** #
 #                                 Colors                                       #
 # **************************************************************************** #
 
@@ -64,42 +72,46 @@ YELLOW  = \033[33m
 RED     = \033[31m
 BOLD    = \033[1m
 
+# **************************************************************************** #
+#                           Other Variables                                    #
+# **************************************************************************** #
+
 TOTAL_STEPS := $(words $(OBJ))
 SCRIPT_URL = https://github.com/jeromeDev94/make_interface.git
-
-# **************************************************************************** #
-#                                 Files                                        #
-# **************************************************************************** #
-
-OBJ = 		$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-DEPS = 		$(OBJ:.o=.d)
-
-### PHONY TARGETS ###
-.PHONY: all clean fclean re val san download-script run-prompt run norm valgrind helgrind todo calendar debug
 
 # **************************************************************************** #
 #                                Main Rules                                    #
 # **************************************************************************** #
 
-update:
-	./make_interface/update_makefile.sh
+VERBOSE ?= @
+
+# Default target
+run-prompt: download-script
+	@./make_interface/exec/make_prompt
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(OBJ_DIR)/main.o
-	@echo "Compiling..."
+$(NAME): $(OBJ) $(OBJ_DIR)/main_bonus.o
 	$(CC) $(CFLAGS) $(INCLUDES) $(LIB_DIR) $(OBJ) $(OBJ_DIR)/main.o -o $(NAME) $(LIB) > .compile.log 2>&1
-	./make_interface/progress $(TOTAL_STEPS) .compile.log
+	@if [ "$(VERBOSE)" = "@" ]; then \
+		echo "Compiling..."; \
+		./make_interface/exec/progress $(TOTAL_STEPS) .compile.log; \
+	else \
+		cat .compile.log; \
+	fi
 	@echo "Compilation complete."
+
+classic: VERBOSE =
+classic: $(NAME)
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@ 2>> .compile.log
+	$(VERBOSE)$(CC) $(CFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
 
-$(OBJ_DIR)/main.o: main.c | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@ 2>> .compile.log
+$(OBJ_DIR)/main_bonus.o: main_bonus.c | $(OBJ_DIR)
+	$(VERBOSE)$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 -include $(DEPS)
 
@@ -134,6 +146,7 @@ helgrind:
 valgrind:
 	@$(VALG) ./$(NAME) $(filter-out $@,$(MAKECMDGOALS))
 
+# Thread sanitizer rule
 san: CFLAGS += $(SANITIZE)
 san: CFLAGS -= $(VFLAGS)
 san: CC = clang
@@ -171,9 +184,18 @@ calendar: create-cal
 		-c ":bd .calendar/$(NAME).calendar" 
 
 uml:
-	@./make_interface/interactive_select 
+	@if sudo -n true 2>/dev/null; then \
+		./make_interface/exec/interactive_select_sudo; \
+	else \
+		./make_interface/exec/interactive_select; \
+	fi
 
+build:
+	@./make_interface/exec/config/build
+	make update
 
+update:
+	@./make_interfacei/exec/update_makefile.sh
 
 debug:
 	@echo "Searching for '# define DEBUG' in headers..."
@@ -196,7 +218,7 @@ debug:
 	fi
 
 help:
-	@echo "$(BOLD)$(YELLOW)------------------- $(NAME) project Makefile (42 school) ----------------------$(RESET)"
+	@echo "$(BOLD)$(YELLOW)------------------- $(NAME) project Makefile (42 school) ---------------------------------$(RESET)"
 	@echo ""
 	@echo "Welcome to the 42 School Make Interface - 42MI"
 	@echo ""
@@ -206,6 +228,7 @@ help:
 	@echo "$(BOLD)$(BLUE)Available targets (++ = takes args after target):$(RESET)"
 	@echo "$(GREEN)  norm           $(RESET)- Runs norminette on the source files."
 	@echo "$(GREEN)  all            $(RESET)- Compiles the $(NAME) project."
+	@echo "$(GREEN)  classic        $(RESET)- Compiles the $(NAME) project with all compilation logs."
 	@echo "$(GREEN)  val            $(RESET)- Compiles the $(NAME) project with valgrind compilation flags."
 	@echo "$(GREEN)  san            $(RESET)- Clang compiles with thread sanitizer enabled. $(RED)!DO NOT USE VALGRIND.$(RESET)"
 	@echo "$(GREEN)  default        $(RESET)- Unable sanitizer thread and compiles with cc (Valgrind OK)"
@@ -217,6 +240,7 @@ help:
 	@echo "$(GREEN)  fclean         $(RESET)- Removes object files and the executable."
 	@echo "$(GREEN)  fullclean      $(RESET)- Removes the interface, object files, and executable."
 	@echo "$(GREEN)  re             $(RESET)- Cleans and recompiles the project."
+	@echo "$(GREEN)  build          $(RESET)- Run the Makefile builder script."
 	@echo "$(GREEN)  update         $(RESET)- Update the .c source files list in Makefile."
 	@echo "$(GREEN)  uml            $(RESET)- Enter in the UML schematics menu of the projects."
 	@echo "$(GREEN)  calendar       $(RESET)- Displays the project calendar."
@@ -224,18 +248,21 @@ help:
 	@echo "$(GREEN)  run-prompt     $(RESET)- Starts a custom Make prompt interface."
 	@echo "$(GREEN)  help           $(RESET)- Displays this help message."
 	@echo ""
-	@echo "$(BOLD)$(YELLOW)-------------------------------------------------------------------------------$(RESET)"
+	@echo "$(BOLD)$(YELLOW)-----------------------------------------------------------------------------------------$(RESET)"
 
 download-script:
 	@if [ ! -d make_interface ]; then \
 		echo "Downloading make_interface script..."; \
 		git clone $(SCRIPT_URL) > .download.log 2>&1;\
-		./make_interface/progress 10 .download.log; \
-		chmod +x make_interface/make_prompt; \
+		./make_interface/exec/progress 10 .download.log; \
+		chmod +x make_interface/exec/make_prompt; \
 		echo "Script downloaded !"; \
 		make -s help; \
 	fi
 
+# Catch-all rule to prevent errors with undefined targets
 %:
 	@:
 
+### PHONY TARGETS ###
+.PHONY: all clean fclean re val san download-script run-prompt run norm valgrind helgrind todo calendar debug

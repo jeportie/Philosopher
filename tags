@@ -1,0 +1,284 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLUE	bonus/Makefile	/^BLUE    = \\033[34m$/;"	m
+BLUE	mandatory/Makefile	/^BLUE    = \\033[34m$/;"	m
+BOLD	bonus/Makefile	/^BOLD    = \\033[1m$/;"	m
+BOLD	mandatory/Makefile	/^BOLD    = \\033[1m$/;"	m
+CC	bonus/Makefile	/^CC = 		cc$/;"	m
+CC	bonus/Makefile	/^default: CC = cc$/;"	m
+CC	bonus/Makefile	/^san: CC = clang$/;"	m
+CC	bonus/Makefile	/^val: CC = cc$/;"	m
+CC	mandatory/Makefile	/^CC = 		cc$/;"	m
+CC	mandatory/Makefile	/^default: CC = cc$/;"	m
+CC	mandatory/Makefile	/^san: CC = clang$/;"	m
+CC	mandatory/Makefile	/^val: CC = cc$/;"	m
+CFLAGS	bonus/Makefile	/^CFLAGS = 	-Wall -Wextra -Werror -pthread$/;"	m
+CFLAGS	mandatory/Makefile	/^CFLAGS = 	-Wall -Wextra -Werror -pthread$/;"	m
+DEAD	bonus/include/philo_bonus.h	35;"	d
+DEAD	mandatory/include/philo.h	32;"	d
+DEBUG	bonus/include/philo_bonus.h	29;"	d
+DEBUG	mandatory/include/philo.h	26;"	d
+DEPFLAGS	bonus/Makefile	/^DEPFLAGS =  -MMD -MP$/;"	m
+DEPFLAGS	mandatory/Makefile	/^DEPFLAGS =  -MMD -MP$/;"	m
+DEPS	bonus/Makefile	/^DEPS = 		$(OBJ:.o=.d)$/;"	m
+DEPS	mandatory/Makefile	/^DEPS = 		$(OBJ:.o=.d)$/;"	m
+DirectoryOfThisScript	ycm_extra_conf.py	/^def DirectoryOfThisScript():$/;"	f
+EAT	bonus/include/philo_bonus.h	39;"	d
+EAT	mandatory/include/philo.h	36;"	d
+EVEN	bonus/include/philo_bonus.h	43;"	d
+EVEN	mandatory/include/philo.h	40;"	d
+FlagsForFile	ycm_extra_conf.py	/^def FlagsForFile(filename):$/;"	f
+GREEN	bonus/Makefile	/^GREEN   = \\033[32m$/;"	m
+GREEN	bonus/include/philo_bonus.h	32;"	d
+GREEN	mandatory/Makefile	/^GREEN   = \\033[32m$/;"	m
+GREEN	mandatory/include/philo.h	29;"	d
+HELG	bonus/Makefile	/^HELG =      valgrind --tool=helgrind --history-level=full \\$/;"	m
+HELG	mandatory/Makefile	/^HELG =      valgrind --tool=helgrind --history-level=full \\$/;"	m
+INCLUDES	bonus/Makefile	/^INCLUDES = $/;"	m
+INCLUDES	mandatory/Makefile	/^INCLUDES = $/;"	m
+LEFT	bonus/include/philo_bonus.h	37;"	d
+LEFT	mandatory/include/philo.h	34;"	d
+LIBS	bonus/Makefile	/^LIBS = $/;"	m
+LIBS	mandatory/Makefile	/^LIBS = $/;"	m
+LIB_DIR	bonus/Makefile	/^LIB_DIR =	$/;"	m
+LIB_DIR	mandatory/Makefile	/^LIB_DIR =	$/;"	m
+MakeRelativePathsAbsolute	ycm_extra_conf.py	/^def MakeRelativePathsAbsolute(flags, working_directory):$/;"	f
+NAME	bonus/Makefile	/^NAME = philo_bonus$/;"	m
+NAME	mandatory/Makefile	/^NAME = philo$/;"	m
+OBJ	bonus/Makefile	/^OBJ = 		$(SRC:$(SRC_DIR)\/%.c=$(OBJ_DIR)\/%.o)$/;"	m
+OBJ	mandatory/Makefile	/^OBJ = 		$(SRC:$(SRC_DIR)\/%.c=$(OBJ_DIR)\/%.o)$/;"	m
+OBJ_DIR	bonus/Makefile	/^OBJ_DIR = 	obj$/;"	m
+OBJ_DIR	mandatory/Makefile	/^OBJ_DIR = 	obj$/;"	m
+ODD	bonus/include/philo_bonus.h	44;"	d
+ODD	mandatory/include/philo.h	41;"	d
+PHILO_BONUS_H	bonus/include/philo_bonus.h	14;"	d
+PHILO_H	mandatory/include/philo.h	14;"	d
+RED	bonus/Makefile	/^RED     = \\033[31m$/;"	m
+RED	bonus/include/philo_bonus.h	31;"	d
+RED	mandatory/Makefile	/^RED     = \\033[31m$/;"	m
+RED	mandatory/include/philo.h	28;"	d
+RESET	bonus/Makefile	/^RESET   = \\033[0m$/;"	m
+RESET	bonus/include/philo_bonus.h	33;"	d
+RESET	mandatory/Makefile	/^RESET   = \\033[0m$/;"	m
+RESET	mandatory/include/philo.h	30;"	d
+RIGHT	bonus/include/philo_bonus.h	38;"	d
+RIGHT	mandatory/include/philo.h	35;"	d
+SANITIZE	bonus/Makefile	/^SANITIZE = 	-g3 -fPIC -fsanitize=thread$/;"	m
+SANITIZE	mandatory/Makefile	/^SANITIZE = 	-g3 -fPIC -fsanitize=thread$/;"	m
+SCRIPT_URL	bonus/Makefile	/^SCRIPT_URL = https:\/\/github.com\/jeromeDev94\/make_interface.git$/;"	m
+SCRIPT_URL	mandatory/Makefile	/^SCRIPT_URL = https:\/\/github.com\/jeromeDev94\/make_interface.git$/;"	m
+SLEEP	bonus/include/philo_bonus.h	40;"	d
+SLEEP	mandatory/include/philo.h	37;"	d
+SRC	bonus/Makefile	/^SRC = \\$/;"	m
+SRC	mandatory/Makefile	/^SRC = \\$/;"	m
+SRC_DIR	bonus/Makefile	/^SRC_DIR = 	src$/;"	m
+SRC_DIR	mandatory/Makefile	/^SRC_DIR = 	src$/;"	m
+STOP	bonus/include/philo_bonus.h	41;"	d
+STOP	mandatory/include/philo.h	38;"	d
+THINK	bonus/include/philo_bonus.h	36;"	d
+THINK	mandatory/include/philo.h	33;"	d
+TOTAL_STEPS	bonus/Makefile	/^TOTAL_STEPS := $(words $(OBJ))$/;"	m
+TOTAL_STEPS	mandatory/Makefile	/^TOTAL_STEPS := $(words $(OBJ))$/;"	m
+VALG	bonus/Makefile	/^VALG =		valgrind --leak-check=full --show-leak-kinds=all \\$/;"	m
+VALG	mandatory/Makefile	/^VALG =		valgrind --leak-check=full --show-leak-kinds=all \\$/;"	m
+VERBOSE	bonus/Makefile	/^VERBOSE ?= @$/;"	m
+VERBOSE	bonus/Makefile	/^classic: VERBOSE =$/;"	m
+VERBOSE	mandatory/Makefile	/^VERBOSE ?= @$/;"	m
+VERBOSE	mandatory/Makefile	/^classic: VERBOSE =$/;"	m
+VFLAGS	bonus/Makefile	/^VFLAGS = 	-g3 -fPIC $/;"	m
+VFLAGS	mandatory/Makefile	/^VFLAGS = 	-g3 -fPIC $/;"	m
+YELLOW	bonus/Makefile	/^YELLOW  = \\033[33m$/;"	m
+YELLOW	mandatory/Makefile	/^YELLOW  = \\033[33m$/;"	m
+calendar_cache_directory	bonus/Makefile	/^	vim -c "let g:calendar_cache_directory=expand('.\/.calendar\/')" \\$/;"	m
+calendar_cache_directory	mandatory/Makefile	/^	vim -c "let g:calendar_cache_directory=expand('.\/.calendar\/')" \\$/;"	m
+compilation_database_folder	ycm_extra_conf.py	/^compilation_database_folder = ''$/;"	v
+end_count	mandatory/include/philo.h	/^	int			end_count;$/;"	m	struct:s_sync
+end_mutex	mandatory/include/philo.h	/^	t_mtx		end_mutex;$/;"	m	struct:s_sync
+finish_flag	mandatory/include/philo.h	/^	bool			finish_flag;$/;"	m	struct:s_philo
+finish_mutex	mandatory/include/philo.h	/^	t_mtx			finish_mutex;$/;"	m	struct:s_philo
+flags	ycm_extra_conf.py	/^flags = [$/;"	v
+fork_mutex	mandatory/include/philo.h	/^	t_mtx	fork_mutex;$/;"	m	struct:s_forks
+forks	mandatory/include/philo.h	/^	t_forks		*forks;$/;"	m	struct:s_simu
+ft_actualise_forks	mandatory/src/forks_2.c	/^void	ft_actualise_forks(t_forks *fork, bool value, int id)$/;"	f
+ft_atoi	bonus/src/42ft_bonus.c	/^int	ft_atoi(const char *nptr)$/;"	f
+ft_atoi	mandatory/src/42ft.c	/^int	ft_atoi(const char *nptr)$/;"	f
+ft_check_args	bonus/src/parsing_bonus.c	/^bool	ft_check_args(int ac, char **av)$/;"	f
+ft_check_args	mandatory/src/parsing.c	/^bool	ft_check_args(int ac, char **av)$/;"	f
+ft_check_death	bonus/src/routine_bonus.c	/^static bool	ft_check_death(t_philo *ph)$/;"	f	file:
+ft_check_if_already_finished	mandatory/src/monitor.c	/^bool	ft_check_if_already_finished(t_philo *philo)$/;"	f
+ft_check_if_dead	mandatory/src/monitor.c	/^bool	ft_check_if_dead(t_philo *philo)$/;"	f
+ft_check_remaining_locks	mandatory/src/routine.c	/^void	ft_check_remaining_locks(t_philo *philo)$/;"	f
+ft_define_forks	mandatory/src/forks_2.c	/^void	ft_define_forks(t_philo *philo, t_forks **fone,$/;"	f
+ft_destroy_mutex	mandatory/src/utilities_2.c	/^void	ft_destroy_mutex(t_simu *simu)$/;"	f
+ft_eat	bonus/src/routine_bonus.c	/^void	ft_eat(t_philo *ph)$/;"	f
+ft_eat	mandatory/src/actions.c	/^bool	ft_eat(t_philo *philo)$/;"	f
+ft_fork_pick	mandatory/src/forks.c	/^void	ft_fork_pick(t_philo *philo, bool state)$/;"	f
+ft_fork_request	mandatory/src/forks.c	/^bool	ft_fork_request(int philo_id, t_forks *fork)$/;"	f
+ft_free_forks	mandatory/src/utilities_2.c	/^void	ft_free_forks(t_simu *simu)$/;"	f
+ft_free_philos	mandatory/src/utilities_2.c	/^void	ft_free_philos(t_simu *simu)$/;"	f
+ft_free_remaining_forks	mandatory/src/init_2.c	/^static void	ft_free_remaining_forks(int i, t_simu *simu)$/;"	f	file:
+ft_get_elapsed_time_us	bonus/src/utilities_bonus.c	/^static long long	ft_get_elapsed_time_us(t_timeval start, t_timeval end)$/;"	f	file:
+ft_get_elapsed_time_us	mandatory/src/utilities.c	/^static long long	ft_get_elapsed_time_us(t_timeval start, t_timeval end)$/;"	f	file:
+ft_get_time	mandatory/src/forks.c	/^void	ft_get_time(t_forks *fork, long long *time_left, long long *time_right)$/;"	f
+ft_get_time_ms	bonus/src/utilities_bonus.c	/^long long	ft_get_time_ms(void)$/;"	f
+ft_get_time_ms	mandatory/src/utilities.c	/^long long	ft_get_time_ms(void)$/;"	f
+ft_init_bonus	bonus/src/init_bonus.c	/^bool	ft_init_bonus(t_simu *simu, int ac, char **av)$/;"	f
+ft_init_forks	mandatory/src/init_2.c	/^bool	ft_init_forks(t_simu *simu)$/;"	f
+ft_init_monitor	mandatory/src/init.c	/^void	ft_init_monitor(t_simu *simu)$/;"	f
+ft_init_mtdata	mandatory/src/init.c	/^bool	ft_init_mtdata(t_simu *simu)$/;"	f
+ft_init_philos	mandatory/src/init.c	/^bool	ft_init_philos(t_simu *simu)$/;"	f
+ft_init_rdonly	mandatory/src/init.c	/^bool	ft_init_rdonly(t_simu *simu, int ac, char **av)$/;"	f
+ft_init_threads	mandatory/src/init_2.c	/^bool	ft_init_threads(t_simu *simu)$/;"	f
+ft_is_int	bonus/src/parsing_bonus.c	/^bool	ft_is_int(char *nptr)$/;"	f
+ft_is_int	mandatory/src/parsing.c	/^bool	ft_is_int(char *nptr)$/;"	f
+ft_is_int_help	bonus/src/parsing_bonus.c	/^static bool	ft_is_int_help(char *nptr, int i, int sign, int len)$/;"	f	file:
+ft_is_int_help	mandatory/src/parsing.c	/^static bool	ft_is_int_help(char *nptr, int i, int sign, int len)$/;"	f	file:
+ft_isdigit	bonus/src/42ft_bonus.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isdigit	mandatory/src/42ft.c	/^int	ft_isdigit(int c)$/;"	f
+ft_issign	bonus/src/42ft_bonus.c	/^int	ft_issign(int c, int *sign)$/;"	f
+ft_issign	mandatory/src/42ft.c	/^int	ft_issign(int c, int *sign)$/;"	f
+ft_isspace	bonus/src/42ft_bonus.c	/^int	ft_isspace(int c)$/;"	f
+ft_isspace	mandatory/src/42ft.c	/^int	ft_isspace(int c)$/;"	f
+ft_join_remaining_threads	mandatory/src/init_2.c	/^static void	ft_join_remaining_threads(int i, t_simu *simu)$/;"	f	file:
+ft_kill_all	bonus/src/forking_bonus.c	/^void	ft_kill_all(t_simu *simu)$/;"	f
+ft_launch_processes	bonus/src/forking_bonus.c	/^bool	ft_launch_processes(t_simu *simu)$/;"	f
+ft_link	mandatory/src/init.c	/^static void	ft_link(t_simu *simu, t_philo *philo, int i)$/;"	f	file:
+ft_links_init	mandatory/src/safe_init.c	/^void	ft_links_init(t_simu *simu)$/;"	f
+ft_mon_routine	mandatory/src/monitor.c	/^static bool	ft_mon_routine(t_monitor *mon)$/;"	f	file:
+ft_monitor	mandatory/src/monitor.c	/^void	*ft_monitor(void *arg)$/;"	f
+ft_one_philo_case	mandatory/src/routine.c	/^static bool	ft_one_philo_case(t_philo *philo)$/;"	f	file:
+ft_open_semaphores	bonus/src/init_bonus.c	/^bool	ft_open_semaphores(t_simu *simu)$/;"	f
+ft_parse_and_fill_rdonly	bonus/src/init_bonus.c	/^static bool	ft_parse_and_fill_rdonly(t_simu *simu, int ac, char **av)$/;"	f	file:
+ft_perror	bonus/src/utilities_bonus.c	/^void	ft_perror(char *str)$/;"	f
+ft_perror	mandatory/src/utilities_2.c	/^void	ft_perror(char *str)$/;"	f
+ft_pick_up_forks	mandatory/src/actions.c	/^bool	ft_pick_up_forks(t_philo *philo)$/;"	f
+ft_picking_order	mandatory/src/forks.c	/^static void	ft_picking_order(t_forks *fork, int id)$/;"	f	file:
+ft_precise_usleep	bonus/src/utilities_bonus.c	/^void	ft_precise_usleep(long long usec)$/;"	f
+ft_precise_usleep	mandatory/src/utilities.c	/^void	ft_precise_usleep(long long usec)$/;"	f
+ft_print_action	bonus/src/printing_bonus.c	/^static void	ft_print_action(t_philo *ph, long long elapsed, const char *msg)$/;"	f	file:
+ft_print_format	mandatory/src/printing.c	/^void	ft_print_format(t_philo *philo, long long time, const char *format)$/;"	f
+ft_print_parsing	bonus/src/printing_bonus.c	/^void	ft_print_parsing(t_simu *simu)$/;"	f
+ft_print_parsing	mandatory/src/printing.c	/^void	ft_print_parsing(t_simu simu)$/;"	f
+ft_print_start_stop	bonus/src/printing_bonus.c	/^void	ft_print_start_stop(t_simu *simu, bool is_start)$/;"	f
+ft_print_start_stop	mandatory/src/printing.c	/^void	ft_print_start_stop(t_simu *simu, bool choice)$/;"	f
+ft_print_state	bonus/src/printing_bonus.c	/^void	ft_print_state(t_philo *ph, int state)$/;"	f
+ft_print_state	mandatory/src/printing.c	/^void	ft_print_state(t_philo *philo, int state)$/;"	f
+ft_release	mandatory/src/forks.c	/^void	ft_release(t_philo *philo, bool state)$/;"	f
+ft_release_forks	mandatory/src/actions.c	/^void	ft_release_forks(t_philo *philo)$/;"	f
+ft_routine	bonus/src/routine_bonus.c	/^void	ft_routine(t_philo *ph)$/;"	f
+ft_routine	mandatory/src/routine.c	/^void	*ft_routine(void *arg)$/;"	f
+ft_safe_simulation_init	mandatory/src/safe_init.c	/^bool	ft_safe_simulation_init(t_simu *simu, int ac, char **av)$/;"	f
+ft_safe_thread_init	mandatory/src/safe_init.c	/^bool	ft_safe_thread_init(t_simu *simu)$/;"	f
+ft_simulation_loop	mandatory/src/actions.c	/^void	ft_simulation_loop(t_philo *philo)$/;"	f
+ft_sleep	mandatory/src/actions.c	/^void	ft_sleep(t_philo *philo)$/;"	f
+ft_sleep_and_think	bonus/src/routine_bonus.c	/^void	ft_sleep_and_think(t_philo *ph)$/;"	f
+ft_start_simulation	mandatory/src/simulation.c	/^void	ft_start_simulation(t_simu *simu)$/;"	f
+ft_stop_threads	mandatory/src/utilities_2.c	/^void	ft_stop_threads(t_simu *simu)$/;"	f
+ft_strncmp	bonus/src/42ft_bonus.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncmp	mandatory/src/42ft.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_update_meal_time	mandatory/src/utilities.c	/^void	ft_update_meal_time(t_philo *philo)$/;"	f
+ft_wait_for_processes	bonus/src/forking_bonus.c	/^void	ft_wait_for_processes(t_simu *simu)$/;"	f
+ft_wait_for_start	mandatory/src/utilities.c	/^void	ft_wait_for_start(t_mtx *mutex, bool *start)$/;"	f
+ft_wait_for_stop	mandatory/src/monitor.c	/^void	ft_wait_for_stop(t_mtx *mutex, bool *start)$/;"	f
+ft_wait_threads_to_start	mandatory/src/simulation.c	/^static void	ft_wait_threads_to_start(t_simu *simu)$/;"	f	file:
+ft_wait_threads_to_stop	mandatory/src/simulation.c	/^void	ft_wait_threads_to_stop(t_simu *simu)$/;"	f
+go_count	mandatory/include/philo.h	/^	int			go_count;$/;"	m	struct:s_sync
+go_mutex	mandatory/include/philo.h	/^	t_mtx		go_mutex;$/;"	m	struct:s_sync
+id	bonus/include/philo_bonus.h	/^	int				id;$/;"	m	struct:s_philo
+id	mandatory/include/philo.h	/^	int				id;$/;"	m	struct:s_philo
+is_locked	mandatory/include/philo.h	/^	bool	is_locked;$/;"	m	struct:s_forks
+is_locked	mandatory/include/philo.h	/^	bool	is_locked;$/;"	m	struct:s_pmtx
+last_meal_time	bonus/include/philo_bonus.h	/^	long long		last_meal_time;$/;"	m	struct:s_philo
+last_meal_time	mandatory/include/philo.h	/^	long long		last_meal_time;$/;"	m	struct:s_philo
+left_fork	mandatory/include/philo.h	/^	t_forks			*left_fork;$/;"	m	struct:s_philo
+left_philo	mandatory/include/philo.h	/^	t_philo	*left_philo;$/;"	m	struct:s_forks
+lock_mutex	mandatory/include/philo.h	/^	t_mtx	lock_mutex;$/;"	m	struct:s_forks
+main	bonus/main_bonus.c	/^int	main(int ac, char **av)$/;"	f
+main	mandatory/main.c	/^int	main(int ac, char **av)$/;"	f
+meal_mutex	mandatory/include/philo.h	/^	t_mtx		meal_mutex;$/;"	m	struct:s_sync
+meals_eaten	bonus/include/philo_bonus.h	/^	int				meals_eaten;$/;"	m	struct:s_philo
+meals_eaten	mandatory/include/philo.h	/^	int				meals_eaten;$/;"	m	struct:s_philo
+monitor	mandatory/include/philo.h	/^	t_monitor	monitor;$/;"	m	struct:s_simu
+mtdata	mandatory/include/philo.h	/^	t_sync			*mtdata;$/;"	m	struct:s_monitor
+mtdata	mandatory/include/philo.h	/^	t_sync			*mtdata;$/;"	m	struct:s_philo
+mtdata	mandatory/include/philo.h	/^	t_sync		mtdata;$/;"	m	struct:s_simu
+mtx_increment_int	mandatory/src/utilities_3.c	/^void	mtx_increment_int(t_mtx *mutex, int *dest)$/;"	f
+mtx_set_llong	mandatory/src/utilities_3.c	/^void	mtx_set_llong(t_mtx *mutex, long long *dest, long long value)$/;"	f
+num_meals	bonus/include/philo_bonus.h	/^	int			num_meals;$/;"	m	struct:s_rdonly
+num_meals	mandatory/include/philo.h	/^	int			num_meals;$/;"	m	struct:s_rdonly
+num_philo	bonus/include/philo_bonus.h	/^	int			num_philo;$/;"	m	struct:s_rdonly
+num_philo	mandatory/include/philo.h	/^	int			num_philo;$/;"	m	struct:s_rdonly
+philo_id	mandatory/include/philo.h	/^	int		philo_id;$/;"	m	struct:s_forks
+philos	bonus/include/philo_bonus.h	/^	t_philo		*philos;$/;"	m	struct:s_simu
+philos	mandatory/include/philo.h	/^	t_philo		*philos;$/;"	m	struct:s_simu
+philos_full	mandatory/include/philo.h	/^	int			philos_full;$/;"	m	struct:s_sync
+pid	bonus/include/philo_bonus.h	/^	pid_t			pid;$/;"	m	struct:s_philo
+pmutex	mandatory/include/philo.h	/^	t_mtx	pmutex;$/;"	m	struct:s_pmtx
+print_mutex	mandatory/include/philo.h	/^	t_pmtx		print_mutex;$/;"	m	struct:s_sync
+rdonly	bonus/include/philo_bonus.h	/^	t_rdonly		*rdonly;$/;"	m	struct:s_philo
+rdonly	bonus/include/philo_bonus.h	/^	t_rdonly	rdonly;$/;"	m	struct:s_simu
+rdonly	mandatory/include/philo.h	/^	t_rdonly		*rdonly;$/;"	m	struct:s_monitor
+rdonly	mandatory/include/philo.h	/^	t_rdonly		*rdonly;$/;"	m	struct:s_philo
+rdonly	mandatory/include/philo.h	/^	t_rdonly	rdonly;$/;"	m	struct:s_simu
+request_mutex	mandatory/include/philo.h	/^	t_mtx	request_mutex;$/;"	m	struct:s_forks
+right_fork	mandatory/include/philo.h	/^	t_forks			*right_fork;$/;"	m	struct:s_philo
+right_philo	mandatory/include/philo.h	/^	t_philo	*right_philo;$/;"	m	struct:s_forks
+s_forks	mandatory/include/philo.h	/^typedef struct s_forks$/;"	s
+s_monitor	mandatory/include/philo.h	/^typedef struct s_monitor$/;"	s
+s_philo	bonus/include/philo_bonus.h	/^typedef struct s_philo$/;"	s
+s_philo	mandatory/include/philo.h	/^typedef struct s_philo$/;"	s
+s_pmtx	mandatory/include/philo.h	/^typedef struct s_pmtx$/;"	s
+s_rdonly	bonus/include/philo_bonus.h	/^typedef struct s_rdonly$/;"	s
+s_rdonly	mandatory/include/philo.h	/^typedef struct s_rdonly$/;"	s
+s_simu	bonus/include/philo_bonus.h	/^typedef struct s_simu$/;"	s
+s_simu	mandatory/include/philo.h	/^typedef struct s_simu$/;"	s
+s_sync	mandatory/include/philo.h	/^typedef struct s_sync$/;"	s
+sem_death	bonus/include/philo_bonus.h	/^	sem_t		*sem_death;$/;"	m	struct:s_simu
+sem_forks	bonus/include/philo_bonus.h	/^	sem_t		*sem_forks;$/;"	m	struct:s_simu
+sem_meals	bonus/include/philo_bonus.h	/^	sem_t		*sem_meals;$/;"	m	struct:s_simu
+sem_print	bonus/include/philo_bonus.h	/^	sem_t		*sem_print;$/;"	m	struct:s_simu
+simu	bonus/include/philo_bonus.h	/^	t_simu			*simu;$/;"	m	struct:s_philo
+simu	mandatory/include/philo.h	/^	t_simu			*simu;$/;"	m	struct:s_monitor
+simu	mandatory/include/philo.h	/^	t_simu			*simu;$/;"	m	struct:s_philo
+start_flag	mandatory/include/philo.h	/^	bool		start_flag;$/;"	m	struct:s_sync
+start_mutex	mandatory/include/philo.h	/^	t_mtx		start_mutex;$/;"	m	struct:s_sync
+start_offset	bonus/include/philo_bonus.h	/^	long long		start_offset;$/;"	m	struct:s_philo
+start_offset	mandatory/include/philo.h	/^	long long		start_offset;$/;"	m	struct:s_philo
+start_time	bonus/include/philo_bonus.h	/^	long long	start_time;$/;"	m	struct:s_rdonly
+start_time	mandatory/include/philo.h	/^	long long	start_time;$/;"	m	struct:s_rdonly
+stop_flag	mandatory/include/philo.h	/^	bool		stop_flag;$/;"	m	struct:s_sync
+stop_mutex	mandatory/include/philo.h	/^	t_mtx		stop_mutex;$/;"	m	struct:s_sync
+t_forks	mandatory/include/philo.h	/^}				t_forks;$/;"	t	typeref:struct:s_forks
+t_monitor	mandatory/include/philo.h	/^}					t_monitor;$/;"	t	typeref:struct:s_monitor
+t_mtx	mandatory/include/philo.h	/^typedef pthread_mutex_t	t_mtx;$/;"	t
+t_philo	bonus/include/philo_bonus.h	/^typedef struct s_philo	t_philo;$/;"	t	typeref:struct:s_philo
+t_philo	bonus/include/philo_bonus.h	/^}					t_philo;$/;"	t	typeref:struct:s_philo
+t_philo	mandatory/include/philo.h	/^typedef struct s_philo	t_philo;$/;"	t	typeref:struct:s_philo
+t_philo	mandatory/include/philo.h	/^}					t_philo;$/;"	t	typeref:struct:s_philo
+t_pmtx	mandatory/include/philo.h	/^}				t_pmtx;$/;"	t	typeref:struct:s_pmtx
+t_rdonly	bonus/include/philo_bonus.h	/^typedef struct s_rdonly	t_rdonly;$/;"	t	typeref:struct:s_rdonly
+t_rdonly	bonus/include/philo_bonus.h	/^}				t_rdonly;$/;"	t	typeref:struct:s_rdonly
+t_rdonly	mandatory/include/philo.h	/^typedef struct s_rdonly	t_rdonly;$/;"	t	typeref:struct:s_rdonly
+t_rdonly	mandatory/include/philo.h	/^}				t_rdonly;$/;"	t	typeref:struct:s_rdonly
+t_simu	bonus/include/philo_bonus.h	/^typedef struct s_simu	t_simu;$/;"	t	typeref:struct:s_simu
+t_simu	bonus/include/philo_bonus.h	/^}				t_simu;$/;"	t	typeref:struct:s_simu
+t_simu	mandatory/include/philo.h	/^typedef struct s_simu	t_simu;$/;"	t	typeref:struct:s_simu
+t_simu	mandatory/include/philo.h	/^}				t_simu;$/;"	t	typeref:struct:s_simu
+t_sync	bonus/include/philo_bonus.h	/^typedef struct s_sync	t_sync;$/;"	t	typeref:struct:s_sync
+t_sync	mandatory/include/philo.h	/^typedef struct s_sync	t_sync;$/;"	t	typeref:struct:s_sync
+t_sync	mandatory/include/philo.h	/^}				t_sync;$/;"	t	typeref:struct:s_sync
+t_timeval	bonus/include/philo_bonus.h	/^typedef struct timeval	t_timeval;$/;"	t	typeref:struct:timeval
+t_timeval	mandatory/include/philo.h	/^typedef struct timeval	t_timeval;$/;"	t	typeref:struct:timeval
+thread	mandatory/include/philo.h	/^	pthread_t		thread;$/;"	m	struct:s_monitor
+thread	mandatory/include/philo.h	/^	pthread_t		thread;$/;"	m	struct:s_philo
+time_mutex	mandatory/include/philo.h	/^	t_mtx			time_mutex;$/;"	m	struct:s_philo
+time_to_die	bonus/include/philo_bonus.h	/^	int			time_to_die;$/;"	m	struct:s_rdonly
+time_to_die	mandatory/include/philo.h	/^	int			time_to_die;$/;"	m	struct:s_rdonly
+time_to_eat	bonus/include/philo_bonus.h	/^	int			time_to_eat;$/;"	m	struct:s_rdonly
+time_to_eat	mandatory/include/philo.h	/^	int			time_to_eat;$/;"	m	struct:s_rdonly
+time_to_sleep	bonus/include/philo_bonus.h	/^	int			time_to_sleep;$/;"	m	struct:s_rdonly
+time_to_sleep	mandatory/include/philo.h	/^	int			time_to_sleep;$/;"	m	struct:s_rdonly

@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 16:23:49 by jeportie          #+#    #+#             */
-/*   Updated: 2024/09/16 09:06:21 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/13 21:42:33 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ typedef struct s_philo
 	t_rdonly		*rdonly;
 	t_sync			*mtdata;
 	t_simu			*simu;
+
+	long long		start_offset;
 }					t_philo;
 
 typedef struct s_monitor

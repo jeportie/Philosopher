@@ -6,7 +6,7 @@
 /*   By: jeportie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 13:59:42 by jeportie          #+#    #+#             */
-/*   Updated: 2024/09/12 11:14:04 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/14 15:24:40 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,13 @@ bool	ft_init_philos(t_simu *simu)
 			return (false);
 		}
 		ft_link(simu, &philos[i], i);
+		if (simu->rdonly.num_philo % 2 != 0 && (philos[i].id % 2 != 0)
+			&& (philos[i].id != 1))
+			philos[i].start_offset = 2 * 50;
+		else if ((philos[i].id % 2) == 0)
+			philos[i].start_offset = 50;
+		else
+			philos[i].start_offset = 0;
 		i++;
 	}
 	simu->philos = philos;

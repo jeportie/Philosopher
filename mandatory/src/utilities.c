@@ -6,7 +6,7 @@
 /*   By: jeportie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 09:28:50 by jeportie          #+#    #+#             */
-/*   Updated: 2024/09/11 12:49:17 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/13 21:43:33 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,6 @@ void	ft_wait_for_start(t_mtx *mutex, bool *start)
 void	ft_update_meal_time(t_philo *philo)
 {
 	pthread_mutex_lock(&philo->time_mutex);
-	if (philo->rdonly->num_philo % 2 == 0)
-		philo->last_meal_time = ft_get_time_ms();
-	else if (philo->rdonly->num_philo % 2 == 1)
-		philo->last_meal_time = ft_get_time_ms()
-			+ (philo->rdonly->time_to_eat / 4);
+	philo->last_meal_time = ft_get_time_ms();
 	pthread_mutex_unlock(&philo->time_mutex);
 }

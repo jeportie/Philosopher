@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 23:06:41 by jeportie          #+#    #+#             */
-/*   Updated: 2024/09/16 09:18:36 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/13 21:49:22 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	*ft_routine(void *arg)
 		return (NULL);
 	mtx_increment_int(&philo->mtdata->go_mutex, &philo->mtdata->go_count);
 	ft_wait_for_start(&philo->mtdata->start_mutex, &philo->mtdata->start_flag);
+	if (philo->start_offset > 0)
+		ft_precise_usleep(philo->start_offset * 1000);
 	mtx_set_llong(&philo->time_mutex, &philo->last_meal_time, ft_get_time_ms());
 	if (ft_one_philo_case(philo))
 		return (NULL);
