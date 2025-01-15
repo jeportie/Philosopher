@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 23:06:41 by jeportie          #+#    #+#             */
-/*   Updated: 2025/01/13 21:49:22 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:58:06 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,17 @@ static bool	ft_one_philo_case(t_philo *philo)
 	}
 	return (false);
 }
+
+/* NOTE:
+ * Last concurrence optimisation to avoid synchronisation and timming issues
+ * that make a philo die when we have an odd number of philosopher and 
+ * very small time gaps btwn sleep eat and die.
+ * STAGGERING method (see init) : each philo philo will have a offset thinking
+ * time : first philo have always an offset of 0, even philos have a 50ms
+ * thinking offset and odd philos has 2 times that offset.
+ * Avoid the non_deterministic behavious of philos to optimise thinking time.
+ * next step after STAGGERING is SCHEDULING like in os systems.
+ */
 
 void	*ft_routine(void *arg)
 {
