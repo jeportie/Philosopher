@@ -116,6 +116,7 @@ ft_define_forks	mandatory/src/forks_2.c	/^void	ft_define_forks(t_philo *philo, t
 ft_destroy_mutex	mandatory/src/utilities_2.c	/^void	ft_destroy_mutex(t_simu *simu)$/;"	f
 ft_eat	bonus/src/routine_bonus.c	/^void	ft_eat(t_philo *ph)$/;"	f
 ft_eat	mandatory/src/actions.c	/^bool	ft_eat(t_philo *philo)$/;"	f
+ft_exit	bonus/src/routine_bonus.c	/^static void	ft_exit(t_philo *ph, int id, bool do_free)$/;"	f	file:
 ft_fork_pick	mandatory/src/forks.c	/^void	ft_fork_pick(t_philo *philo, bool state)$/;"	f
 ft_fork_request	mandatory/src/forks.c	/^bool	ft_fork_request(int philo_id, t_forks *fork)$/;"	f
 ft_free_forks	mandatory/src/utilities_2.c	/^void	ft_free_forks(t_simu *simu)$/;"	f
@@ -128,7 +129,7 @@ ft_get_time_ms	bonus/src/utilities_bonus.c	/^long long	ft_get_time_ms(void)$/;"	
 ft_get_time_ms	mandatory/src/utilities.c	/^long long	ft_get_time_ms(void)$/;"	f
 ft_init_bonus	bonus/src/init_bonus.c	/^bool	ft_init_bonus(t_simu *simu, int ac, char **av)$/;"	f
 ft_init_forks	mandatory/src/init_2.c	/^bool	ft_init_forks(t_simu *simu)$/;"	f
-ft_init_monitor	mandatory/src/init.c	/^void	ft_init_monitor(t_simu *simu)$/;"	f
+ft_init_monitor	mandatory/src/init_2.c	/^void	ft_init_monitor(t_simu *simu)$/;"	f
 ft_init_mtdata	mandatory/src/init.c	/^bool	ft_init_mtdata(t_simu *simu)$/;"	f
 ft_init_philos	mandatory/src/init.c	/^bool	ft_init_philos(t_simu *simu)$/;"	f
 ft_init_rdonly	mandatory/src/init.c	/^bool	ft_init_rdonly(t_simu *simu, int ac, char **av)$/;"	f
@@ -199,6 +200,7 @@ left_philo	mandatory/include/philo.h	/^	t_philo	*left_philo;$/;"	m	struct:s_fork
 lock_mutex	mandatory/include/philo.h	/^	t_mtx	lock_mutex;$/;"	m	struct:s_forks
 main	bonus/main_bonus.c	/^int	main(int ac, char **av)$/;"	f
 main	mandatory/main.c	/^int	main(int ac, char **av)$/;"	f
+manage_offset	mandatory/src/init.c	/^void	manage_offset(t_simu *simu, t_philo *philos, int i)$/;"	f
 meal_mutex	mandatory/include/philo.h	/^	t_mtx		meal_mutex;$/;"	m	struct:s_sync
 meals_eaten	bonus/include/philo_bonus.h	/^	int				meals_eaten;$/;"	m	struct:s_philo
 meals_eaten	mandatory/include/philo.h	/^	int				meals_eaten;$/;"	m	struct:s_philo

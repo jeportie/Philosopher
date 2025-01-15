@@ -6,11 +6,22 @@
 /*   By: jeportie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 12:26:10 by jeportie          #+#    #+#             */
-/*   Updated: 2024/09/12 21:50:40 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:50:11 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
+
+void	ft_init_monitor(t_simu *simu)
+{
+	t_monitor	mon;
+
+	memset(&mon, 0, sizeof(t_monitor));
+	mon.rdonly = &simu->rdonly;
+	mon.mtdata = &simu->mtdata;
+	mon.simu = simu;
+	simu->monitor = mon;
+}
 
 static void	ft_free_remaining_forks(int i, t_simu *simu)
 {

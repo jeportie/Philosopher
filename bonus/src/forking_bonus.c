@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 21:00:17 by jeportie          #+#    #+#             */
-/*   Updated: 2025/01/14 21:44:01 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:03:47 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,7 @@ bool	ft_launch_processes(t_simu *simu)
 			return (false);
 		}
 		else if (pid == 0)
-		{
 			ft_routine(&simu->philos[i]);
-			exit(0);
-		}
 		else
 			simu->philos[i].pid = pid;
 		i++;
@@ -57,6 +54,7 @@ void	ft_wait_for_processes(t_simu *simu)
 			if (code == 0)
 			{
 				count_finished++;
+				ft_kill_all(simu);
 				if (count_finished == simu->rdonly.num_philo)
 					break ;
 			}

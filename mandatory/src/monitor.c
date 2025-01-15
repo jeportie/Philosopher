@@ -6,13 +6,14 @@
 /*   By: jeportie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:00:00 by jeportie          #+#    #+#             */
-/*   Updated: 2025/01/13 22:53:53 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:44:09 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* NOTE: MONITOR THREAD */
 
 #include "../include/philo.h"
+
 /*
  * NOTE:
  * This function is the monitor routine. 
@@ -66,7 +67,7 @@ void	*ft_monitor(void *arg)
 	mtx_increment_int(&mon->mtdata->go_mutex, &mon->mtdata->go_count);
 	ft_wait_for_start(&mon->mtdata->start_mutex, &mon->mtdata->start_flag);
 	while (ft_get_time_ms() < (mon->simu->rdonly.start_time + 250))
-    	ft_precise_usleep(50);
+		ft_precise_usleep(50);
 	while (1)
 	{
 		if (!ft_mon_routine(mon))
@@ -128,9 +129,6 @@ bool	ft_check_if_dead(t_philo *philo)
 	if (philo->mtdata->stop_flag == true)
 		return (true);
 	pthread_mutex_unlock(&philo->mtdata->stop_mutex);
-//	if (ft_get_time_ms() - philo->rdonly->start_time <= 5)
-//		time = ft_get_time_ms() - philo->rdonly->start_time;
-//	else
 	time = ft_get_time_ms() - last_meal;
 	if (time >= philo->rdonly->time_to_die)
 	{

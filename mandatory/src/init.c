@@ -6,7 +6,7 @@
 /*   By: jeportie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 13:59:42 by jeportie          #+#    #+#             */
-/*   Updated: 2025/01/14 15:24:40 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:50:16 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,21 @@ bool	ft_init_rdonly(t_simu *simu, int ac, char **av)
 
 static void	ft_link(t_simu *simu, t_philo *philo, int i)
 {
-		philo->id = i + 1;
-		philo->rdonly = &simu->rdonly;
-		philo->mtdata = &simu->mtdata;
-		philo->simu = simu;
+	philo->id = i + 1;
+	philo->rdonly = &simu->rdonly;
+	philo->mtdata = &simu->mtdata;
+	philo->simu = simu;
+}
+
+void	manage_offset(t_simu *simu, t_philo *philos, int i)
+{
+	if (simu->rdonly.num_philo % 2 != 0 && (philos[i].id % 2 != 0)
+		&& (philos[i].id != 1))
+		philos[i].start_offset = 2 * 50;
+	else if ((philos[i].id % 2) == 0)
+		philos[i].start_offset = 50;
+	else
+		philos[i].start_offset = 0;
 }
 
 bool	ft_init_philos(t_simu *simu)
@@ -88,26 +99,9 @@ bool	ft_init_philos(t_simu *simu)
 			return (false);
 		}
 		ft_link(simu, &philos[i], i);
-		if (simu->rdonly.num_philo % 2 != 0 && (philos[i].id % 2 != 0)
-			&& (philos[i].id != 1))
-			philos[i].start_offset = 2 * 50;
-		else if ((philos[i].id % 2) == 0)
-			philos[i].start_offset = 50;
-		else
-			philos[i].start_offset = 0;
+		manage_offset(simu, philos, i);
 		i++;
 	}
 	simu->philos = philos;
 	return (true);
-}
-
-void	ft_init_monitor(t_simu *simu)
-{
-	t_monitor	mon;
-
-	memset(&mon, 0, sizeof(t_monitor));
-	mon.rdonly = &simu->rdonly;
-	mon.mtdata = &simu->mtdata;
-	mon.simu = simu;
-	simu->monitor = mon;
 }
